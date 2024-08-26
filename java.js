@@ -25,7 +25,18 @@ function clearBoard(){
 
 function hover (e){
     let target = e.target;
+    let opacityIncrement = .1;
+
+
+    if (target.style.opacity > "1") {
+        opacityIncrement = 0;
+    }
+
     target.style.background = "red";
+    target.style.opacity = Number(target.style.opacity) + opacityIncrement;
+      
+
+    console.log(target.style.opacity + .1)
 }
 
 function createGrid(size){
