@@ -25,7 +25,15 @@ function clearBoard(){
 
 function hover (e){
     let target = e.target;
-    target.style.background = "red";
+    console.log(getRandomRGBColor());
+    target.style.background = getRandomRGBColor();
+}
+
+function getRandomRGBColor(){
+    let red = Math.floor(Math.random()*255);
+    let green = Math.floor(Math.random()*255);
+    let blue = Math.floor(Math.random()*255);
+    return `RGB(${red},${green},${blue})`;
 }
 
 function createGrid(size){
