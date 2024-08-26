@@ -27,15 +27,19 @@ function hover (e){
     let target = e.target;
     let opacityIncrement = .1;
 
-
-    if (target.style.opacity > "1") {
+    if (opacityIncrement > 1) {
         opacityIncrement = 0;
     }
-
-    target.style.background = "red";
+    target.style.background = getRandomRGBColor();
     target.style.opacity = Number(target.style.opacity) + opacityIncrement;
-      
-    console.log(target.style.opacity + .1)
+
+}
+
+function getRandomRGBColor(){
+    let red = Math.floor(Math.random()*255);
+    let green = Math.floor(Math.random()*255);
+    let blue = Math.floor(Math.random()*255);
+    return `RGB(${red},${green},${blue})`; 
 }
 
 function createGrid(size){
