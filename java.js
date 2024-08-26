@@ -35,7 +35,6 @@ function hover (e){
     target.style.background = "red";
     target.style.opacity = Number(target.style.opacity) + opacityIncrement;
       
-
     console.log(target.style.opacity + .1)
 }
 
