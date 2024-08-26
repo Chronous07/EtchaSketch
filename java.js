@@ -34,6 +34,7 @@ function getRandomRGBColor(){
     let green = Math.floor(Math.random()*255);
     let blue = Math.floor(Math.random()*255);
     return `RGB(${red},${green},${blue})`;
+    
 }
 
 function createGrid(size){
